@@ -1,0 +1,38 @@
+.choice-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.choice-card{
+    flex: 0 1 30%;
+    /* width: 28%;
+    margin: 2%; */
+    margin-top: 7%;
+    transition: .3s ease-in-out;
+  }
+  .choice-card:hover{
+    background-color: blue;
+    cursor: pointer;
+    margin-top: 5%;
+    box-shadow: 5px 15px 16.83px .2px rgba(248, 246, 246, 0.493);
+}
+  .choice-grid > div {
+    background: rgba(255, 255, 255, 0.082);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: .05px solid white;
+  }
+  .choice-grid {
+    text-align: center;
+  }
+  @media screen and (max-width: 800px) {
+    .choice-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

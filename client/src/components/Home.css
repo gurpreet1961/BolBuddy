@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
+
+:root {
+  --primary-color: #3e5ec9;
+  --secondary--color: #f89537;
+  --text-color: #c5bbec;
+}
+
+
+
+body {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+home-h1,
+home-h2,
+home-p {
+  margin-bottom: 0.625rem;
+}
+
+.home-btn {
+  display: inline-block;
+  border: 0;
+  background-color: var(--secondary--color);
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: .1s ease-in-out;
+}
+
+.home-btn:hover {
+  transform: scale(0.98);
+  background-color: rgb(255, 115, 0);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.section {
+  position: relative;
+  padding: 0 20px;
+}
+
+.section-top {
+  min-height: 180px;
+  padding-top: 20px;
+}
+
+.globe{
+  margin-top: 50px;
+  width: 40%;
+  position: absolute;
+  animation: move 5s ease-in-out  infinite;
+  /* transition: transform 2s ease-in-out; */
+}
+
+@keyframes move {
+  0%   {margin-top: 0px;}
+  50%   {margin-top: 100px;}
+  100% {margin-top: 0px;}
+}
+
+.section-top .content {
+  text-align: center;
+}
+
+.section-top .content h1 {
+  font-size: 45px;
+}
+
+.section-top .content,
+.section-stream .play,
+.section-stream .content {
+  position: static;
+  width: 100%;
+}
+
+.section-stream {
+  min-height: 400px;
+  background: url("https://i.ibb.co/bsX6RV0/bg2.png") no-repeat center
+    center/cover;
+}
+
+.section-stream h2 {
+  font-size: 35px;
+}
+
+.section-stream .play {
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  opacity: 0.5;
+}
+
+.section-stream .content > div,
+.section-grid > div {
+  background: rgba(255, 255, 255, 0.082);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: .05px solid white;
+}
+
+.section-grid {
+  display: block;
+  margin-top: 0;
+  text-align: center;
+}
+
+.section-grid p {
+  color: var(--text-color);
+}
+
+.section-grid .dot {
+  font-size: 40px;
+  padding-left: 2px;
+}
+
+@media (min-width: 768px) {
+  .section-top {
+    min-height: 400px;
+    padding-top: 20px;
+  }
+
+  .section-top .content {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    width: 55%;
+  }
+
+  .section-top .content h1 {
+    font-size: 70px;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .section-stream {
+    min-height: 600px;
+  }
+
+  .section-stream .play {
+    width: 27%;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    opacity: 1;
+  }
+
+  .section-stream .content {
+    position: absolute;
+    width: 50%;
+    top: 130px;
+    right: 70px;
+  }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 0px;
+  }
+
+}
